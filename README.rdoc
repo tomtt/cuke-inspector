@@ -1,6 +1,6 @@
 = cuke-inspector
 
-Description goes here.
+A formatter to create a json representation of the steps used in a cucumber suite and html to view them
 
 == Note on Patches/Pull Requests
  
