@@ -2,6 +2,13 @@
 
 A formatter to create a json representation of the steps used in a cucumber suite and html to view them
 
+To set up the generation of the json file for a rails project:
+- Add the cuke-inspector gem to your environment.rb (config.gem 'cuke-inspector', :lib => false)
+- Require the cuke-inspector gem from features/support/env.rb
+- Add public/javascripts/cucumber_steps.json to your .gitignore
+- Add the formatter to the default options in your config/cucumber.yml. The options to add are:
+  "--format Cucumber::Formatter::StepdefsJson --out public/javascripts/cucumber_steps.json"
+
 == Note on Patches/Pull Requests
  
 * Fork the project.
