@@ -8,6 +8,9 @@ To set up the generation of the json file for a rails project:
 - Add public/cuke-inspector to your .gitignore
 - Add the formatter to the default options in your config/cucumber.yml. The options to add are:
   "--format Cucumber::Formatter::StepdefsJson --out public/cuke-inspector/javascripts/cucumber_steps.json"
+- Generate the view files by running ./script/generate cuke_inspector_view
+- Run rake cucumber:ok (to generate the file in public/cuke-inspector/javascripts/cucumber_steps.json)
+- Visit /cuke-inspector/ for your project
 
 == Note on Patches/Pull Requests
  
