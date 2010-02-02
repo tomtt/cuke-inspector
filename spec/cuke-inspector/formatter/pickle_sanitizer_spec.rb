@@ -82,6 +82,13 @@ module Cucumber
             "this is a \#{capture_predicate} example"
         end
 
+        it "maps capture_predicate even if it has changed" do
+          predicate_example = "((?:position[_ ]by[_ ]type|respond[_ ]to[_ ]without[_ ]attributes|invalid|publishing[_ ]enabled|attribute[_ ]present|nil|updated[_ ]at|acts[_ ]like|first[_ ]item|present))"          
+          @parser.stub!(:capture_predicate).and_return(predicate_example)
+          regexp_string = "this string contains a simple predicate capture ((?:position[_ ]by[_ ]type|respond[_ ]to[_ ]without[_ ]attributes|invalid|publishing[_ ]enabled)) just before here"
+          PickleSanitizer.unpickle(regexp_string).should ==
+            'this string contains a simple predicate capture #{capture_predicate} just before here'
+        end
       end
     end
   end
