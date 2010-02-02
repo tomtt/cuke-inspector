@@ -1,5 +1,6 @@
 require 'cucumber'
 require 'cucumber/formatter/usage'
+require 'cuke-inspector/formatter/pickle_sanitizer'
 
 module Cucumber
   module Formatter
@@ -27,7 +28,7 @@ module Cucumber
         regexp.gsub!(/\(\[\^\\?\"\]\*\??\)/, prompt)
         regexp.gsub!('(.*)', prompt)
         regexp.gsub!('\/([^\/]*)\/', "/#{prompt}/")
-        regexp
+        return PickleSanitizer.unpickle(regexp)
       end
 
       def progress(status)

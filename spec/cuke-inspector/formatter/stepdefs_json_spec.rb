@@ -5,6 +5,13 @@ module Cucumber
   module Formatter
     describe StepdefsJson do
       describe "extracting text from regexp" do
+        before do
+          # Pretend that unpickle will always return its argument unmodified
+          def PickleSanitizer.unpickle(foo)
+            foo
+          end
+        end
+
         it "should just return a simple string" do
           StepdefsJson.extract_text_from_regexp("bla").should == "bla"
         end
