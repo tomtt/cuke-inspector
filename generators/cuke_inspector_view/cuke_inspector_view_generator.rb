@@ -20,11 +20,11 @@ class CukeInspectorViewGenerator < Rails::Generator::Base
       m.file 'images/toggle-open.gif',   'public/cuke-inspector/images/toggle-open.gif'
 
       m.file 'javascripts/cucumber_step_completion.js',
-             'cuke-inspector/javascripts/cucumber_step_completion.js'
+             'public/cuke-inspector/javascripts/cucumber_step_completion.js'
       m.file 'javascripts/jquery-1.3.2.min.js',
-             'cuke-inspector/javascripts/jquery-1.3.2.min.js'
+             'public/cuke-inspector/javascripts/jquery-1.3.2.min.js'
       m.file 'javascripts/jquery.tablesorter-2.0.3.min.js',
-             'cuke-inspector/javascripts/jquery.tablesorter-2.0.3.min.js'
+             'public/cuke-inspector/javascripts/jquery.tablesorter-2.0.3.min.js'
 
       m.file 'stylesheets/tablesorter.css',
              'public/cuke-inspector/stylesheets/tablesorter.css'
