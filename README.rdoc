@@ -5,7 +5,6 @@ A formatter to create a json representation of the steps used in a cucumber suit
 To set up the generation of the json file for a rails project:
 - Add the cuke-inspector gem to your environment.rb (config.gem 'cuke-inspector', :lib => false)
 - Require the cuke-inspector gem from features/support/env.rb
-- Add public/cuke-inspector to your .gitignore
 - Add the formatter to the default options in your config/cucumber.yml. The options to add are:
   "--format Cucumber::Formatter::StepdefsJson --out public/cuke-inspector/javascripts/cucumber_steps.json"
 - Generate the view files by running ./script/generate cuke_inspector_view
