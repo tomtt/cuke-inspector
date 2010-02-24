@@ -10,6 +10,7 @@ module Cucumber
 
       def self.unpickle(regexp_string)
         if Gem.available?('pickle')
+          require 'pickle'
           @@pickle_parser ||= Pickle::Parser.new(:config => Pickle::Config.new)
           @@pickle_capture_methods.each do |capture_method|
             regexp_string.gsub!(@@pickle_parser.send(capture_method), "\#{#{capture_method}}")
