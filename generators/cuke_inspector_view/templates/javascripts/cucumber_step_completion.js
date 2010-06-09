@@ -39,19 +39,19 @@ var cucumberStepCompletion = {
     var count = cucumberStepCompletion.cucumberSteps[elementOfArray].length;
     var id = " id='step-definition-" + indexInArray + "'";
     var onClick;
-    var class;
+    var klass;
 
     if (count > 0) {
       onClick = " onClick='cucumberStepCompletion.toggleStepExamplesFor(" +
         indexInArray + ");'"
-      class = " class='toggle closed step-definition'"
+      klass = " class='toggle closed step-definition'"
     }
     else {
       onClick = "";
-      class = " class='step-definition'"
+      klass = " class='step-definition'"
     }
 
-    return "<tr><td><div" + class + onClick + id + ">" +
+    return "<tr><td><div" + klass + onClick + id + ">" +
       elementOfArray +
       "</div></td><td class='number'>" + count + "</td></tr>\n";
 
